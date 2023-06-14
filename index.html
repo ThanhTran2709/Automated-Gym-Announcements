@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FC Closing Announcements</title>
+
+
+	<script src="index.js"></script>
+    <script>
+		function onResponsiveVoiceLoad() {
+    		console.log("Responsive Voice loaded successfully");
+  	}
+	</script>
+	
+	<script src="https://code.responsivevoice.org/responsivevoice.js?key=hqpMwM3q" onload='onResponsiveVoiceLoad()'></script>
+	
+	<script src="speech.js"></script>
+
+    <style>
+        body {
+            background-image: url("img/background.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			margin: 0;
+        }
+
+        #main{
+			margin: auto;
+			max-width: 80%;
+			max-height: 80%;
+			padding: 20px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            background-color: #F3F2F2;
+			border: 3px solid black;
+			border-radius: 25px;
+        }
+
+        h1{
+            text-align: center;
+            padding: 10px;
+        }
+
+        h2{
+            text-align: center;
+            padding: 10px;
+            font-size: x-large;
+        }
+
+        #clock{
+            text-align: center;
+            padding: 10px;
+            text-decoration: bold;
+        }
+
+        #author{
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            margin-right: 10px;
+            text-decoration: bold;
+            font-style: italic;
+            color:white;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        /* Media queries */
+        @media screen and (max-width: 600px) {
+            #main {
+                width: 90%;
+                height: 200px;
+            }
+            h1 {
+                font-size: medium;
+            }
+            h2 {
+                font-size: small;
+            }
+            #author {
+                font-size: small;
+            }
+        }
+    </style>
+
+</head>
+<body onload="init()">
+    <div id="main">
+        <h1>SFU Fitness Centre Automatic Closing Announcements</h1>
+        <h2>Time until next announcement</h2>
+        <div id="clock"></div>
+        <p>Announcements will be made at 20:00, 20:15, 20:30, 20:45, 20:50, 20:55 and 21:00, with updated hours on weekends</p>
+    </div>
+    
+
+    <p id="author">Michael Tran</p>
+
+</body>
+</html>

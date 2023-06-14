@@ -1,0 +1,29 @@
+{
+  "name": "announcement-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "build": {
+    "productName": "FC Announcement Maker",
+    "win": {
+      "target": "nsis",
+      "icon": "img/icon.ico"
+    },
+    "files": [
+      "dist/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "output": "release"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "michael-tran",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^24.1.2",
+    "electron-packager": "^17.1.1"
+  }
+}
